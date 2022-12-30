@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MusicFragment">
+
+    <FrameLayout
+        android:id="@+id/tvUpper"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Now Playing"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="56dp"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:id="@+id/preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Talk Me Down"
+            android:textSize="34dp"
+            android:layout_marginTop="300dp"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/preview_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Blue Neighbourhood"
+            android:textSize="16dp"
+            android:layout_marginTop="347dp"
+            android:layout_gravity="center_horizontal"/>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="365dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        tools:listitem="@layout/item_music"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</FrameLayout>
